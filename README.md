@@ -1,4 +1,4 @@
-Mock RSC payload with MSW.
+Example of mocking RSC payload with MSW.
 
 Run app:
 ```bash
