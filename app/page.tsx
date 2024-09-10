@@ -13,13 +13,13 @@ async function getUser() {
 }
 
 export default async function Home() {
-  // const user = await getUser()
+  const user = await getUser()
 
   return (
     <main>
       <Link href="/user">User</Link>
-      {/* <p id="server-side-greeting">Hello, {user.firstName}!</p> */}
-      {/* <MovieList /> */}
+      <p id="server-side-greeting">Hello, {user.firstName}!</p>
+      <MovieList />
     </main>
   )
 }

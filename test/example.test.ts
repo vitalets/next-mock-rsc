@@ -8,14 +8,14 @@ test('mock RSC', async ({ page }) => {
   await expect(greeting).toHaveText('Hello, Fake!')
 })
 
-test.skip('receives mocked responses in loaders', async ({ page }) => {
+test('receives mocked responses in loaders', async ({ page }) => {
   await page.goto('/', { waitUntil: 'networkidle' })
 
   const greeting = page.locator('#server-side-greeting')
-  await expect(greeting).toHaveText('Hello, John!')
+  await expect(greeting).toHaveText('Hello, Sarah!')
 })
 
-test.skip('receives mocked responses on browser runtime', async ({ page }) => {
+test('receives mocked responses on browser runtime', async ({ page }) => {
   await page.goto('/', { waitUntil: 'networkidle' })
 
   const fetchMoviesButton = page.locator('#fetch-movies-button')

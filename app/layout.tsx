@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { MSWProvider } from './msw-provider'
 
-// if (process.env.NEXT_RUNTIME === 'nodejs') {
-//   const { server } = require('../mocks/node');
-//   server.listen()
-// }
+if (process.env.NEXT_RUNTIME === 'nodejs') {
+  const { server } = require('../mocks/node');
+  server.listen()
+}
 
 const inter = Inter({ subsets: ['latin'] })
 

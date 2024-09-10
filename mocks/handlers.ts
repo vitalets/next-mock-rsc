@@ -30,12 +30,12 @@ Object.defineProperty(handler, 'ID', {
 })
 
 export const handlers = [
-  // http.get<never, never, User>('https://api.example.com/user', () => {
-  //   return HttpResponse.json({
-  //     firstName: 'Sarah',
-  //     lastName: 'Maverick',
-  //   })
-  // }),
+  http.get<never, never, User>('https://api.example.com/user', () => {
+    return HttpResponse.json({
+      firstName: 'Sarah',
+      lastName: 'Maverick',
+    })
+  }),
   http.get('/user', async ({ request }) => {
     const response = await fetch(bypass(request));
     const { status, statusText, headers } = response;
